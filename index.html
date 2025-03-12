@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Música nas Alturas</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="img/logo.png" alt="Contém a imagem da logo" class="logo">
+            <ul>
+                <li><a href="#">CASA</a></li>
+                <li><a href="#">SOBRE</a></li>
+                <li><a href="#">ESPECICAÇÕES</a></li>
+                <li><a href="#">PRODUTOS</a></li>
+                <li><a href="#">CONECTE</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="left-col">
+                <h1>O<br>SOM<br>REAL</h1>
+            </div>
+            <div class="right-col">
+                <p>Click Here To Listen</p>
+                <img src="img/play.png" alt="Contém a imagem de play de música" id="icon">
+            </div>
+        </div>
+    </div>
+
+    <audio id="mySong">
+        <source src="img/Audio7.1.m4a" type="audio/m4a">
+    </audio>
+
+    <script>
+        var mySong = document.getElementById("mySong");
+        var icon = document.getElementById("icon");
+
+        icon.onclick = function(){
+            if(mySong.paused){
+                mySong.play();
+                icon.src = "img/pause.png";
+            }else{
+                mySong.pause();
+                icon.src = "img/play.png";
+            }
+        }
+    </script>
+    
+</body>
+</html>
